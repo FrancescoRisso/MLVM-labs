@@ -122,3 +122,9 @@ core/mapping.json
 
 # Datasets
 */data/*
+
+# Venv files
+**/*.venv
+
+# Vscode stuff
+workspaces/*

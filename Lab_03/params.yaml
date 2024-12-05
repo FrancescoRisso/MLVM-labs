@@ -1,0 +1,51 @@
+# Don't change this please
+Available_methods: {
+  0: "replace the FC layer with a new FC",
+  1: "replace the FC layer with two new FCs",
+  2: "add a FC layer after the last FC, and only train that"
+}
+# End of don't change
+
+method: 2
+
+batch_size: 32
+
+num_phases: 1
+
+learning_rates: [ .001 ]
+
+epochs: [ 20 ]
+
+optimizer: "SDG"
+  # Available methods:
+  # - "Adam" 
+  # - "SGD" (DEFAULT)
+  # Others can be added in the code
+
+loss: "cross entropy"
+  # Available methods:
+  # - "binary cross entropy with logits"
+  # - "cross entropy" (DEFAULT)
+  # Others can be added in the code
+
+train:
+  method_0: []
+    # Available options:
+    # - "train all" => all layers
+    # - "train last" => only the last layer
+    # Others can be added in the code
+    
+  method_1: ["train last two", "train all"]
+    # Available options:
+    # - "train all" => all layers
+    # - "train last" => only the last layer
+    # - "train last two" => only the last two layers
+    # Others can be added in the code
+    
+  method_2: ["train last"]
+    # Available options:
+    # - "train all" => all layers
+    # - "train last" => only the last layer
+    # Others can be added in the code
+
+
